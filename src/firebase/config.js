@@ -1,16 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider ,signInWithPopup, signOut} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD-utOhZinDibLOw5vLd0HVpK9pdY2LO04",
-  authDomain: "decimal-chat-app.firebaseapp.com",
-  projectId: "decimal-chat-app",
-  storageBucket: "decimal-chat-app.firebasestorage.app",
-  messagingSenderId: "795008419357",
-  appId: "1:795008419357:web:1a8e21870f1553718c28f4",
-  measurementId: "G-6GRNWRP1H1"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 
